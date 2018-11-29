@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/v/@r0b0t/itcss.svg)](https://www.npmjs.com/package/@r0b0t/itcss)
 [![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/@r0b0t/itcss.svg)](https://www.npmjs.com/package/@r0b0t/itcss)
 
-Removes all spaces from a string.
+Creates the folder structure for the ITCSS methodology.
 
 ## Install
 
@@ -14,14 +14,21 @@ $ npm install @r0b0t/itcss
 
 ## Usage
 
-```js
-const itcss = require("@r0b0t/itcss");
+```
+$ itcss
+// => Created the settings folder.
+// => Created the tools folder.
+// => Created the generic folder.
+// => Created the elements folder.
+// => Created the objects folder.
+// => Created the components folder.
+// => Created the utilities folder.
+// => Created tools/_tools.scss file
+// => Created settings/_settings.scss file
+// => Created generic/_generic.scss file
+// => Created elements/_elements.scss file
+// => Created objects/_objects.scss file
+// => Created components/_components.scss file
+// => Created utilities/_utilities.scss file
 
-itcss("So much space!");
-//=> "Somuchspace!"
-
-itcss(1337);
-//=> Uncaught TypeError: itcss wants a string!
-//    at tiny (<anonymous>:2:41)
-//    at <anonymous>:1:1
 ```
