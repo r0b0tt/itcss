@@ -1,4 +1,14 @@
 {
 	"name": "@r0b0t/itcss",
-	"version": "1.0.0"
+	"version": "1.0.0",
+	"description": "Creates a folder structure for the  ITCSS methodology",
+	"license": "MIT",
+	"repository": "r0b0tt/itcss",
+	"main": "index.js",
+	"keywords": [
+		"itcss",
+		"npm",
+		"package",
+		"r0b0t"
+	]
 }
