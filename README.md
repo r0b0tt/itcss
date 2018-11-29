@@ -1,34 +1,24 @@
 # @r0b0t/itcss 
-## In development.
 
 [![npm](https://img.shields.io/npm/v/@r0b0t/itcss.svg)](https://www.npmjs.com/package/@r0b0t/itcss)
 [![npm bundle size (minified)](https://img.shields.io/bundlephobia/min/@r0b0t/itcss.svg)](https://www.npmjs.com/package/@r0b0t/itcss)
 
-Creates the folder structure for the ITCSS methodology.
-
-## Install
-
+Creates the folder structure for the ITCSS methodology.  
 ```
-$ npm install @r0b0t/itcss
+1. Settings
+2. Tools
+3. Generic
+4. Elements
+5. Objects
+6. Components
+7. Utilities
+4. ```
 ```
 
-## Usage
-
+Run itcss and specify your main sass file. This imports the various base files into your main sass folder.
 ```
-$ itcss
-// => Created the settings folder.
-// => Created the tools folder.
-// => Created the generic folder.
-// => Created the elements folder.
-// => Created the objects folder.
-// => Created the components folder.
-// => Created the utilities folder.
-// => Created tools/_tools.scss file
-// => Created settings/_settings.scss file
-// => Created generic/_generic.scss file
-// => Created elements/_elements.scss file
-// => Created objects/_objects.scss file
-// => Created components/_components.scss file
-// => Created utilities/_utilities.scss file
-
+$ itcss --file=main.scss
+```
+```
+$ itcss --file=main.sass
 ```
