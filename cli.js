@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const chalk = require('chalk');
+const argv = require('yargs').argv;
 
 function createDirectories() {
     /**
@@ -63,9 +64,50 @@ function createFiles() {
         console.log(chalk.green('Created utilities/_utilities.scss file'));
     });
 }
+if (argv.file) {
 
-exports.createDirectories = createDirectories();
-exports.createFiles = createFiles();
+    let file_name = argv.file;
+    let file_extension = file_name.split('.').pop();
+    if (file_extension === 'scss'){
+
+        exports.createDirectories = createDirectories();
+        exports.createFiles = createFiles();
+
+        fs.writeFile(argv.file,
+            "@import 'settings/settings';\n" +
+            "@import 'tools/tools';\n" +
+            "@import 'generic/generic';\n" +
+            "@import 'elements/elements';\n" +
+            "@import 'objects/objects';\n" +
+            "@import 'components/components';\n" +
+            "@import 'utilities/utilities';\n",
+            function (err, file) {
+                if (err) throw err;
+                console.log(chalk.green('Created ' + argv.file + ' file.'));
+            });
+    } else if(file_extension === 'sass'){
+        exports.createDirectories = createDirectories();
+        exports.createFiles = createFiles();
+
+        fs.writeFile(argv.file,
+            "@import 'settings/settings'\n" +
+            "@import 'tools/tools'\n" +
+            "@import 'generic/generic'\n" +
+            "@import 'elements/elements'\n" +
+            "@import 'objects/objects'\n" +
+            "@import 'components/components'\n" +
+            "@import 'utilities/utilities'\n",
+            function (err, file) {
+                if (err) throw err;
+                console.log(chalk.green('Created' + argv.file + ' file'));
+            });
+    } else{
+        throw (chalk.red('Incompatible file type. Use either .scss or .sass file extension.'));
+    }
+} else{
+    exports.createDirectories = createDirectories();
+    exports.createFiles = createFiles();
+}
 
 console.log(chalk.bold("Thank You for using @r0b0t/itcss.\n"));
 
