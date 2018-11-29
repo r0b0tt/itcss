@@ -12,7 +12,6 @@ Creates the folder structure for the ITCSS methodology.
 5. Objects
 6. Components
 7. Utilities
-4. ```
 ```
 
 Run itcss and specify your main sass file. This imports the various base files into your main sass folder.
