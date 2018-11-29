@@ -5,10 +5,17 @@
 	"license": "MIT",
 	"repository": "r0b0tt/itcss",
 	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
 	"keywords": [
 		"itcss",
 		"npm",
 		"package",
 		"r0b0t"
-	]
+	],
+	"author": "Antonio Maina <antoniomaina.com> (https://github.com/r0b0tt/)",
+	"bin": {
+		"itcss": "./cli.js"
+	}
 }
