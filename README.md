@@ -14,10 +14,15 @@ Creates the folder structure for the ITCSS methodology.
 7. Utilities
 ```
 
+Install the package globally.  
+```$xslt
+$ npm install -g @r0b0t/itcss
+```
 Run itcss and specify your main sass file. This imports the various base files into your main sass folder.
 ```
 $ itcss --file=main.scss
 ```
+or
 ```
 $ itcss --file=main.sass
 ```
